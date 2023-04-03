@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jQuery</title>
+		<style type="text/css">
+			.zielona{background: Pink;}
+		</style>
+		<script type="text/javascript"
+			src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+			<script type="text/javascript">
+			$(function () {
+				$('button:contains(\'Zielony\')').click(function () 
+				{
+					$('#classic').addClass('zielona');
+				});
+				$('button:contains(\'mosteczek\')').click(function () 
+				{
+					$('#classic').removeClass('zielona');
+				});
+				$('button:contains(\'ugina\')').click(function () 
+				{
+					$('#toggle').toggleClass('zielona');
+				});
+				$('tr:even').addClass('zielona');
+				/*wszystkie elementy numerowanej listy*/
+				$('ol.a > li:not(:has(.b))').css('background-color', 'red');
+			});
+		</script>
+	</head>
+	<body>
+		<table>
+			<tr><td>Pierwszy</td></tr>
+			<tr><td>Drugi</td></tr>
+			<tr><td>Trzeci</td></tr>
+			<tr><td>Czwarty</td></tr>
+			<tr><td>Piąty</td></tr>
+			<tr><td>Szósty</td></tr>
+		</table>
+		<ol class="a">
+			<li>Element 1</li>
+			<li>Element 2</li>
+			<li>Element 3</li>
+			<li><a href="lol.pdf" class="b">witam</a></li>
+			<li><a href="k.pdf" class="c">żegnam</a></li>
+			<li>Element 6</li>
+		<div>
+			<button>Zielony</button>
+			<button>mosteczek</button>
+			<span id="classic">Zmiana przez dodawanie/usuwanie klasy.</span>
+		</div>
+		<div>
+			<button>ugina się.</button>
+			<span id="toggle">Zmiana przez przełączanie klas.</span>
+		</div>
+		<button onclick="funkcja()">Przycisk</button>
+	</body>
+</html>
+<!--
+	:contains('Zielony') - wybiera wszystkie elementy, które zawierają w swoim tekście ciąg 'Zielony'
+
+	addClass('zielona') - dodaje klasę 'zielona' do elementu
+	removeClass('zielona') - usuwa klasę 'zielona' z elementu
+	toggleClass('zielona') - przełącza klasę 'zielona' w elemencie
+
+	> - wybiera tylko elementy bezpośrednio wchodzące w skład elementu nadrzędnego
+-->

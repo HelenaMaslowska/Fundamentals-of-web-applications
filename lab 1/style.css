@@ -1,0 +1,48 @@
+li { 
+	list-style-type: square 
+}
+
+span {
+	color: red;
+	font-weight: bold
+}
+
+.wstęp {
+	font-style: italic;
+}
+
+img {
+	border: 5px solid red;
+}
+
+/*  Chcemy uzyskać efekt „rozstrzelenia” liter w nazwisku autora książki. Ustaw styl
+letter-spacing: 5px wszystkim elementom h2 występującym bezpośrednio po elemencie h1. */
+h1 + h2 {
+	letter-spacing: 5px;
+}
+/* Opis książki chcemy wydrukować mniejszym krojem czcionki. Ustaw font-size: small wszystkim
+akapitom zagnieżdżonym bezpośrednio w komórkach tabeli z atrybutem colspan ustawionym na
+wartość 2 */
+td[colspan="2"] > p {
+	font-size: small;
+}
+/* Ustaw kolor szary wszystkim akapitom występującym bezpośrednio po innym akapicie.
+*/
+p~p{
+	font-family: grey;
+}
+
+/*16*/
+body {
+	background-image: url(https://ecsmedia.pl/c/futu-re-b-iext122280075.jpg); 
+	background-repeat: repeat-y;
+}
+
+/*17*/
+/*h1 { color: blue }*/
+/* h1 { color: green } ta reguła zostanie wykonana */
+
+/*18, 19*/
+h1 {
+	color: yellow !important;
+}
